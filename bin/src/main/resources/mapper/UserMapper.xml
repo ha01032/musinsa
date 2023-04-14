@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.and.walking_server.mapper.UserMapper">
+    
+    <select id="doGetOneUser" resultType="com.and.walking_server.model.User">
+    	select * from user where email = #{email}
+    </select>
+    
+    <select id="doGetOneUserByNickname" resultType="com.and.walking_server.model.User">
+    	select * from user where nickname = #{nickname}
+    </select>
+    
+    <insert id="doInsertUser">
+    	insert into user(email, password, nickname, profile_id) values(#{email}, #{password}, #{nickname}, #{profile_id})
+    </insert>
+    
+    <update id="doUpdateUserImgUnchanged">
+    	update user set password = #{password}, nickname = #{nickname} where email = #{email}
+    </update>
+    
+    <update id="doUpdateUser">
+    	update user set password = #{password}, nickname = #{nickname}, profile_id = #{profile_id} where email = #{email}
+    </update>
+    
+    <delete id="doDeleteUser">
+    	delete from user where email = #{email}
+    </delete>
+    
+</mapper>

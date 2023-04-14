@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.and.walking_server.mapper.BoardMapper">
+
+	<select id="doGetBoardList" resultType="com.and.walking_server.model.Board">
+		select * from board order by reg_date DESC
+	</select>
+
+
+	<insert id="doInsertBoard">
+		insert into board (board_title, board_content, reg_date, email) values(#{board_title}, #{board_content}, NOW(), #{email})
+	</insert>
+
+	
+	
+</mapper>
