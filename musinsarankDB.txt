@@ -1,0 +1,46 @@
+create database musinsarank;
+use musinsarank;
+
+CREATE TABLE `top` (
+  `top_id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(200) DEFAULT '-',
+  `link` varchar(200) DEFAULT '-',
+  `price` varchar(100) DEFAULT '-',
+  `brand` varchar(100) DEFAULT '-',
+  `star` varchar(100) DEFAULT '-',
+  `starnum` varchar(100) DEFAULT '-',
+  `imglink` varchar(200) DEFAULT '-',
+  `updatedate` timestamp DEFAULT NULL,
+  PRIMARY KEY (`top_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+CREATE TABLE `outerwear` (
+  `outer_id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(200) DEFAULT '-',
+  `link` varchar(200) DEFAULT '-',
+  `price` varchar(100) DEFAULT '-',
+  `brand` varchar(100) DEFAULT '-',
+  `star` varchar(100) DEFAULT '-',
+  `starnum` varchar(100) DEFAULT '-',
+  `imglink` varchar(200) DEFAULT '-',
+  `updatedate` timestamp DEFAULT NULL,
+  PRIMARY KEY (`outer_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+
+CREATE TABLE `pants` (
+  `pants_id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(200) DEFAULT '-',
+  `link` varchar(200) DEFAULT '-',
+  `price` varchar(100) DEFAULT '-',
+  `brand` varchar(100) DEFAULT '-',
+  `star` varchar(100) DEFAULT '-',
+  `starnum` varchar(100) DEFAULT '-',
+  `imglink` varchar(200) DEFAULT '-',
+  `updatedate` timestamp DEFAULT NULL,
+  PRIMARY KEY (`pants_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
